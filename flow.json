@@ -1,0 +1,37 @@
+{
+	"contracts": {
+		"NonFungibleToken":"./contracts/NonFungibleToken.cdc",
+		"FungibleToken":"./contracts/FungibleToken.cdc",
+		"MetadataViews":"./contracts/MetadataViews.cdc",
+		"ExampleNFT":"./contracts/ExampleNFT.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "38c922330b8b58bac0a90d9cc16d4e3ed48064c71f4c55b9329a85678132e606"
+		},
+		"emulator-creator":{
+			"address":"0x01cf0e2f2f715450",
+			"key": "f927513edab071b3e7088b8cce7dda15ee7cc731795825fb6f632765af260327"
+		},
+		"testnet-creator":{
+			"address":"0x8df565bfae3cce15",
+			"key" :"8ead76a455cffdfdebac692a25a08dd6a8a05ecf5dffb91a3f66fdf99c37bfc6"
+	}
+	},
+	"deployments": {
+		"testnet":{
+			"testnet-creator":[
+				"NonFungibleToken",
+				"FungibleToken",
+				"MetadataViews",
+				"ExampleNFT"
+			]
+		}
+	}
+}
